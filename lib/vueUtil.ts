@@ -13,7 +13,7 @@ export function defineVueComponent<Props, PropsKeys extends (keyof Props)[], Raw
   setup: (props: Readonly<Props>, ctx: SetupContext) => RawBindings | RenderFunction,
   props: MustInclude<keyof Props, PropsKeys>
 ): DefineComponent<DefinePropsToOptions<Props>, RawBindings> {
-  return { setup, name: setup.name, props } as any;
+  return { setup, name: setup.name, props, compatConfig: { MODE: 3 } } as any;
 }
 
 export function withDefault<Props extends Record<string, any>, DefaultProps extends Partial<Props>>(

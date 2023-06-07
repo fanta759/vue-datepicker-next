@@ -3,8 +3,8 @@ import { ref, onMounted, watch, watchEffect } from 'vue';
 import { useLocale, usePrefixClass } from '../context';
 import { getValidDate, startOfDay } from '../util/date';
 import { getScrollParent } from '../util/dom';
-import { Columns } from './Columns';
-import { FixedList } from './FixedList';
+import Columns from './Columns';
+import FixedList from './FixedList';
 import { getColumnOptions, getFixedOptions, TimePickerOptions } from './getOptions';
 import { defineVueComponent, keys, withDefault } from '../vueUtil';
 

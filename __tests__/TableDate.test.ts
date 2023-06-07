@@ -1,6 +1,5 @@
 import { mount, VueWrapper } from '@vue/test-utils';
-import { FunctionalComponent } from 'vue';
-import { TableDate } from '../lib/calendar/TableDate';
+import TableDate from '../lib/calendar/TableDate';
 
 let wrapper: VueWrapper<any>;
 
@@ -10,7 +9,7 @@ afterEach(() => {
 
 describe('TableDate', () => {
   it('corrent render', () => {
-    wrapper = mount(TableDate as FunctionalComponent<any>, {
+    wrapper = mount(TableDate, {
       props: {
         isWeekMode: false,
         showWeekNumber: true,

@@ -1,6 +1,5 @@
 import { mount, VueWrapper } from '@vue/test-utils';
-import { FunctionalComponent } from 'vue';
-import { TableMonth } from '../lib/calendar/TableMonth';
+import TableMonth from '../lib/calendar/TableMonth';
 
 let wrapper: VueWrapper<any>;
 
@@ -10,7 +9,7 @@ afterEach(() => {
 
 describe('TableMonth', () => {
   it('correct render', () => {
-    wrapper = mount(TableMonth as FunctionalComponent<any>, {
+    wrapper = mount(TableMonth, {
       props: {
         calendar: new Date(2019, 9, 1, 0, 0, 0),
         getCellClasses: (date: Date) => {

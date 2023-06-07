@@ -80,4 +80,7 @@ export const ScrollbarVertical = defineComponent({
       </div>
     );
   },
+  compatConfig: {
+    MODE: 3,
+  },
 });

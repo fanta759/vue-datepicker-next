@@ -8,9 +8,9 @@ import {
   startOfMonth,
   startOfYear,
 } from '../util/date';
-import { TableDate } from './TableDate';
-import { TableMonth } from './TableMonth';
-import { TableYear } from './TableYear';
+import TableDate from './TableDate';
+import TableMonth from './TableMonth';
+import TableYear from './TableYear';
 import { PanelType, PickerType } from '../type';
 import { defineVueComponent, keys, withDefault } from '../vueUtil';
 

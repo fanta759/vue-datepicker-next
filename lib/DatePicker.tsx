@@ -52,6 +52,7 @@ function DatePicker(originalProps: DatePickerComponentProps, { slots }: SetupCon
   const format = originalProps.format || formatMap[type] || formatMap.date;
   const props = { ...resolveProps(originalProps, booleanKeys), type, format };
 
+  // return () => {
   return (
     <Picker {...pick(props, Picker.props)}>
       {{
@@ -70,6 +71,76 @@ function DatePicker(originalProps: DatePickerComponentProps, { slots }: SetupCon
       }}
     </Picker>
   );
+  // };
 }
+
+export const datePickerComponentPropsProps = keys<DatePickerComponentProps>()([
+  'appendToBody',
+  'calendar',
+  'clearable',
+  'confirm',
+  'confirmText',
+  'defaultPanel',
+  'defaultValue',
+  'disabled',
+  'disabledDate',
+  'disabledTime',
+  'editable',
+  'format',
+  'formatter',
+  'getClasses',
+  'getYearPanel',
+  'hourOptions',
+  'hourStep',
+  'inputAttr',
+  'inputClass',
+  'lang',
+  'minuteOptions',
+  'minuteStep',
+  'multiple',
+  'onCalendarChange',
+  'onChange',
+  'onClear',
+  'onClickTitle',
+  'onClose',
+  'onConfirm',
+  'onDateMouseEnter',
+  'onDateMouseLeave',
+  'onInputError',
+  'onOpen',
+  'onPanelChange',
+  'onPick',
+  'onShowTimePanelChange',
+  'onUpdate:open',
+  'onUpdate:value',
+  'open',
+  'partialUpdate',
+  'placeholder',
+  'popupClass',
+  'popupStyle',
+  'prefixClass',
+  'range',
+  'renderInputText',
+  'scrollDuration',
+  'secondOptions',
+  'secondStep',
+  'separator',
+  'shortcuts',
+  'showHour',
+  'showMinute',
+  'showSecond',
+  'showTimeHeader',
+  'showTimePanel',
+  'showWeekNumber',
+  'timePickerOptions',
+  'timeTitleFormat',
+  'titleFormat',
+  'type',
+  'use12h',
+  'value',
+  'valueType',
+]);
+
+// export default defineVueComponent(DatePicker, datePickerComponentPropsProps);
 
 export default DatePicker as FunctionalComponent<DatePickerComponentProps, any>;
